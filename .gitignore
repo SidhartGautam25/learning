@@ -1,0 +1,247 @@
+# =============================================================================
+# MONOREPO .gitignore
+# Covers: Next.js · Spring · Spring Boot · Django · Express
+# =============================================================================
+
+
+# =============================================================================
+# NEXT.JS
+# =============================================================================
+**/.next/
+**/out/
+**/next-env.d.ts
+**/.vercel/
+**/next.config.*.timestamp-*
+
+# Next.js build output
+**/build/
+**/.turbo/
+
+
+# =============================================================================
+# NODE / NPM / YARN / PNPM  (Next.js + Express)
+# =============================================================================
+**/node_modules/
+**/.npm/
+**/.yarn/
+**/.pnpm-store/
+**/.pnpm-debug.log*
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
+**/lerna-debug.log*
+**/.cache/
+**/.parcel-cache/
+
+# Environment files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+**/.env.*.local
+
+# TypeScript
+**/*.tsbuildinfo
+
+
+# =============================================================================
+# EXPRESS
+# =============================================================================
+**/logs/
+**/*.log
+**/pids/
+**/*.pid
+**/*.seed
+**/*.pid.lock
+**/coverage/
+**/.nyc_output/
+**/dist/
+
+
+# =============================================================================
+# SPRING / SPRING BOOT (Maven & Gradle)
+# =============================================================================
+
+# Maven
+**/target/
+**/.mvn/wrapper/maven-wrapper.jar
+!**/.mvn/wrapper/maven-wrapper.properties
+**/mvnw
+**/mvnw.cmd
+
+# Gradle
+**/.gradle/
+**/**/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+**/gradle/wrapper/gradle-wrapper.jar
+!**/gradle/wrapper/gradle-wrapper.properties
+**/gradlew
+**/gradlew.bat
+
+# Spring Boot specific
+**/application-local.properties
+**/application-local.yml
+**/application-secret.properties
+**/application-secret.yml
+
+# Spring Boot packaged jar/war
+**/*.jar
+**/*.war
+**/*.ear
+**/*.nar
+
+# Spring Boot logs
+**/spring.log
+
+
+# =============================================================================
+# DJANGO
+# =============================================================================
+
+# Python bytecode
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.pyo
+
+# Distribution / packaging
+**/*.egg
+**/*.egg-info/
+**/dist/
+**/build/
+**/.eggs/
+**/wheels/
+**/MANIFEST
+
+# Virtual environments
+**/venv/
+**/.venv/
+**/env/
+**/.env/
+**/ENV/
+**/env.bak/
+**/venv.bak/
+**/.virtualenv/
+
+# Django specific
+**/db.sqlite3
+**/db.sqlite3-journal
+**/*.sqlite3
+**/media/
+**/staticfiles/
+**/static/collected/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/htmlcov/
+**/.tox/
+**/.coverage
+**/.coverage.*
+**/coverage.xml
+
+# Django secret key / local settings
+**/local_settings.py
+**/settings/local.py
+**/settings_local.py
+
+# Celery
+**/celerybeat-schedule
+**/celerybeat.pid
+
+
+# =============================================================================
+# IDEs & EDITORS
+# =============================================================================
+
+# IntelliJ IDEA / Android Studio
+**/.idea/
+**/*.iws
+**/*.iml
+**/*.ipr
+**/out/
+
+# VS Code
+**/.vscode/
+**/*.code-workspace
+**/.history/
+
+# Eclipse
+**/.classpath
+**/.project
+**/.settings/
+**/.factorypath
+
+# NetBeans
+**/nbproject/private/
+**/nbbuild/
+**/nbdist/
+**/.nb-gradle/
+
+# Vim / Neovim
+**/*.swp
+**/*.swo
+**/.vim/
+
+# Emacs
+**/*~
+**/#*#
+**/.#*
+
+
+# =============================================================================
+# OS FILES
+# =============================================================================
+
+# macOS
+**/.DS_Store
+**/.AppleDouble
+**/.LSOverride
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+
+# Windows
+**/Thumbs.db
+**/Thumbs.db:encryptable
+**/ehthumbs.db
+**/ehthumbs_vista.db
+**/Desktop.ini
+**/$RECYCLE.BIN/
+**/*.lnk
+
+# Linux
+**/*~
+
+
+# =============================================================================
+# SECRETS & CERTIFICATES
+# =============================================================================
+**/*.pem
+**/*.key
+**/*.p12
+**/*.pfx
+**/*.jks
+**/*.keystore
+**/*.cer
+**/*.crt
+**/secrets/
+**/.secrets/
+
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+**/.docker/
+**/docker-compose.override.yml
+
+
+# =============================================================================
+# TERRAFORM / INFRA
+# =============================================================================
+**/.terraform/
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfvars
