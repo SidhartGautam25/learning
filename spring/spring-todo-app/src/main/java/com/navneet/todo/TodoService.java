@@ -1,5 +1,7 @@
 package com.navneet.todo;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,6 +17,10 @@ public class TodoService {
     public void printTodos() {
         System.out.println("Service layer...");
         todoRepository.fetchTodos();
+    }
+
+    public List<Todo> getTodos() {
+        return todoRepository.fetchTodos();
     }
 
     public void createTodo(String title) {
