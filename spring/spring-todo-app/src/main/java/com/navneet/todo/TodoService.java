@@ -27,4 +27,14 @@ public class TodoService {
         System.out.println("Service: creating todo...");
         todoRepository.createTodo(title);
     }
+
+    public void deleteTodo(int id) {
+        System.out.println("Service: deleting todo...");
+        todoRepository.deleteTodo(id);
+    }
+
+    public void updateTodo(int id, String title) {
+        System.out.println("Service: updating todo...");
+        todoRepository.updateTodo(id, title);
+    }
 }
