@@ -4,12 +4,17 @@
        http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!-- Repository Bean -->
+    <!-- Repository -->
     <bean id="todoRepository" class="com.navneet.todo.TodoRepository" />
 
-    <!-- Service Bean with Dependency Injection -->
+    <!-- Service -->
     <bean id="todoService" class="com.navneet.todo.TodoService">
         <constructor-arg ref="todoRepository" />
+    </bean>
+
+    <!-- Controller -->
+    <bean id="todoController" class="com.navneet.todo.TodoController">
+        <constructor-arg ref="todoService" />
     </bean>
 
 </beans>

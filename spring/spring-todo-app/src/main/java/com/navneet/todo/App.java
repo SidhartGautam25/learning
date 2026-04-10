@@ -8,7 +8,9 @@ public class App {
         ApplicationContext context =
             new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        TodoService service = context.getBean("todoService", TodoService.class);
-        service.printTodos();
+        TodoController controller =
+            context.getBean("todoController", TodoController.class);
+
+        controller.getTodos();
     }
 }
