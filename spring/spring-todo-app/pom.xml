@@ -8,7 +8,7 @@
     <groupId>com.navneet</groupId>
     <artifactId>spring-todo-app</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <!-- <packaging>war</packaging> -->
     <dependencies>
         <!-- Spring Core -->
         <dependency>
@@ -16,6 +16,32 @@
             <artifactId>spring-context</artifactId>
             <version>5.3.30</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.3.30</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
+            <scope>provided</scope>
+       </dependency>
     </dependencies>
+    <build>
+    <plugins>
+        <plugin>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-maven-plugin</artifactId>
+            <version>9.4.53.v20231009</version>
+            <configuration>
+                <scanIntervalSeconds>10</scanIntervalSeconds>
+                <webApp>
+                    <contextPath>/</contextPath>
+                </webApp>
+            </configuration>
+        </plugin>
+    </plugins>
+    </build>
 
 </project>

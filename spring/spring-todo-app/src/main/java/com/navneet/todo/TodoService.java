@@ -1,5 +1,9 @@
 package com.navneet.todo;
 
+import org.springframework.stereotype.Service;
+
+
+@Service
 public class TodoService {
 
     private TodoRepository todoRepository;
