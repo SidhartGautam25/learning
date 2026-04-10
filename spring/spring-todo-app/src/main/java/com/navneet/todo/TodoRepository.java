@@ -25,4 +25,20 @@ public class TodoRepository {
             e.printStackTrace();
         }
     }
+
+    public void createTodo(String title) {
+    try (Connection conn = DBConfig.getConnection()) {
+
+        String query = "INSERT INTO todos (title) VALUES (?)";
+        PreparedStatement stmt = conn.prepareStatement(query);
+
+        stmt.setString(1, title);
+        stmt.executeUpdate();
+
+        System.out.println("Todo inserted: " + title);
+
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
 }
