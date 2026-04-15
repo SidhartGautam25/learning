@@ -16,4 +16,4 @@ app.post("/todos", (req, res) => {
   res.json(todo);
 });
 
-app.listen(3002, () => console.log("API running"));
+app.listen(3002, () => console.log("API running on port 3002"));
